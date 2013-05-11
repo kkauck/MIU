@@ -1,0 +1,63 @@
+/*
+Kyle Kauck
+Project One
+MIU 1305
+May 7, 2013
+*/
+
+.newsfeedGame {
+	padding-bottom: 10px;
+}
+
+.ghButtons {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#nameOfApp {
+	font-size: 18px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.warning {
+	background-color: rgba(245,16,16,0.2);
+    border: 2px solid red;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#warningSystem {
+	display: none;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(245,16,16,0.2);
+    border: 2px solid red;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    padding: 10px 10px;
+}
+
+#errorMessages {
+	color: #272727;
+	background-color: rgba(245,16,16,0);
+	margin-right: 0px;
+    margin-bottom: 3px;
+    padding-left: 0px;
+}
+
+#gameInfoList {
+    display: block;
+    font-size: 12px;
+    line-height: 120%;
+    background: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 290px;
+}
+
+#gameImage {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
