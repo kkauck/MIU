@@ -223,6 +223,81 @@ May 9, 2013
 		</div>
 	    </footer>
 	    
+	</div>
+	
+    <!-- Add Item Page! -->
+	<div data-role="page" id="additem" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker - Add a Game!</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content">
+		    <div class="formContainer">
+			<form action="#" method="post" id="addGameForm">
+			    <fieldset>
+				<legend><strong>Add A Game</strong></legend>
+				<!-- Game Titles Text -->
+				<label for="denote"><p id="denote">* Denotes A Required Field</p></label>
+				<div id="warningMessage">
+				    <p id="warningSystem"><br /></p>
+				</div>
+				<div id="titleError">
+				    <p><label for="gameTitle">* Game Title: </label><input type="text" id="gameTitle" /></p>
+				</div>
+				<!-- Select and Options for Console Selections -->
+				<div id="consoleError">
+				    <p id="selectConsole"><label for="console">* Console: </label><br /></p>
+				</div>
+				<!-- Game Genre Text -->
+				<div id="genreError">
+				    <p><label for="genre">* Genre: </label><input type="text" id="genre"  /></p>
+				</div>
+				<!-- Date for when you added the game to the form -->
+				<div id="dateError">
+				    <p><label for="dateAdded">* Date Added: </label><input type="date" id="dateAdded"  /></p>
+				</div>
+				<!-- Radio boxes for if the game have multiplayer -->
+				<div id="multiplayerError">
+				    <p>* Multiplayer Functionality:<br />
+					<input type="radio" name="multiplayer" id="yes" value="Yes" /><label for="yes">Yes</label><br />
+					<input type="radio" name="multiplayer" id="no" value="No" /><label for="no">No</label></p>
+				</div>
+				<!-- A range for the rating you give to the game -->
+				<p><label for="rating">Your Rating: </label><input type="range" id="rating" name="ratingInput" min="0" max="10" value="0" data-highlight="true"/></p>
+				<!-- Text box for download size of the game if applicable to the game -->
+				<p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" /></p>
+				<!-- Text area for extra information about the game -->
+				<p><label for="addInformation">Additional Information: </label><textarea rows="4" cols="50" id="addInformation" placeholder="Please enter any additional information here..."></textarea></p>
+				<label for="forminfo"></label><input type="hidden" name="forminfo" id="forminfo" value="From Add A Game Form"  />
+				<label for="submitButton"></label><input type="button" id="submitButton" value="Submit my game!" />
+			    </fieldset>
+			</form>
+		    </div>
+		    <div id ="gameInfoDisplay"></div>
+		    <nav>
+			<a href="#" id="clearData">Clear Stored Data</a>
+			<a href="#" id="displayData">Display Data</a>
+			<a href="#additem" id="addNewGame" style="display:none;">Add New Game</a>
+		    </nav>
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
 	</div>	
     
     <!-- Javascript/jQM Script Loading -->

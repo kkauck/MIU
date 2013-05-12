@@ -194,14 +194,14 @@ window.addEventListener("DOMContentLoaded", function (){
 	    idGrabber("consoles").value = gameLibrary.console[1];
 	    idGrabber("genre").value = gameLibrary.genre[1];
 	    idGrabber("dateAdded").value = gameLibrary.dateAdded[1];
-	    idGrabber("output").innerHTML = gameLibrary.rating[1];
+	    //idGrabber("output").innerHTML = gameLibrary.rating[1];
 	    idGrabber("rating").value = gameLibrary.rating[1];
 	    var multiplayer = document.getElementById("addGameForm").multiplayer;
         for (var c = 0, d = multiplayer.length; c < d; c++) {
 	        if (multiplayer[c].value == "Yes" && gameLibrary.multiplayer[1] == "Yes") {
-	        	multiplayer[c].setAttribute("checked", "checked");
+	        	multiplayer[c].setAttribute("class", "ui-icon ui-icon-radio-on ui-icon-shadow");
 	        } else if (multiplayer[c].value == "No" && gameLibrary.multiplayer[1] == "No") {
-	        	multiplayer[c].setAttribute("checked", "checked");    
+	        	multiplayer[c].setAttribute("class", "ui-icon ui-icon-radio-on ui-icon-shadow");    
 	        }
         }
 	    idGrabber("download").value = gameLibrary.download[1];
@@ -311,7 +311,6 @@ window.addEventListener("DOMContentLoaded", function (){
 	    	idGrabber("clearData").style.display   = "inline-block";
 	    	idGrabber("displayData").style.display = "none";
 	    	idGrabber("addNewGame").style.display  = "inline-block";
-	    	idGrabber("thankYou").style.display    = "none";
 	    	break;
 	    case "off":
 	    	idGrabber("addGameForm").style.display = "block";
@@ -319,7 +318,6 @@ window.addEventListener("DOMContentLoaded", function (){
 	    	idGrabber("displayData").style.display = "inline-block";
 	    	idGrabber("addNewGame").style.display  = "none";
 	    	idGrabber("gameInfoDisplay").style.display = "none";
-	    	idGrabber("thankYou").style.display    = "block";
 	    	 break;
 	    default:
 	    	return false;
