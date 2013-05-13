@@ -9,11 +9,11 @@ May 7, 2013
 var gamingData = {
 	"haloFour": {
 		"gameTitle": ["<strong>Game Title:</strong> ", "Halo 4"],
-		"console": ["<strong>Console:</strong> ", "Xbox 360"],
+		"console": ["<strong>Console:</strong> ", "Playstation 3"],
 		"genre": ["<strong>Genre:</strong> ", "First Person Shooter"],
 		"dateAdded": ["<strong>Date Added:</strong> ", "2013-04-28"],
 		"rating": ["<strong>Rating:</strong> ", "10"],
-		"multiplayer": ["<strong>Multiplayer Functionality:</strong> ", "Yes"],
+		"multiplayer": ["<strong>Multiplayer Functionality:</strong> ", "No"],
 		"download": ["<strong>Download Size:</strong> ", "3GB"],
 		"additional": ["<strong>Additional Information:</strong> ", "Excellent game, one of the best Xbox games."]
 	},
