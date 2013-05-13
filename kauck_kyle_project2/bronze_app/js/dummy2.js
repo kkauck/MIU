@@ -19,19 +19,35 @@ window.addEventListener("DOMContentLoaded", function (){
 	    var createMyHeader = document.createElement("h3");
 	    createMyHeader.innerHTML = "Xbox 360";
 	    createInfoDiv.appendChild(createMyHeader);
+	    var createNewDiv = document.createElement("div");
+	    createNewDiv.setAttribute("class", "ui-grid-a");
+	    createInfoDiv.appendChild(createNewDiv);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
 		    var gameInfoObject = JSON.parse(gameValue);
 		    if (gameInfoObject.console[1] == "Xbox 360" && gameInfoObject.multiplayer[1] == "Yes") {
-			var createNewDiv = document.createElement("div");
-			createNewDiv.setAttribute("class", "ui-grid-a");
-			createInfoDiv.appendChild(createNewDiv);
 			var gridFormat = document.createElement("div");
 			gridFormat.setAttribute("class", "ui-block-a");
 			createNewDiv.appendChild(gridFormat);
 			var paraFormatting = document.createElement("p");
-			paraFormatting.setAttribute("class", "ui-bar ui-bar-b")
+			paraFormatting.setAttribute("class", "ui-bar ui-bar-c")
+			gridFormat.appendChild(paraFormatting);
+			var createNewHeader = document.createElement ("h3");
+			createNewHeader.innerHTML = gameInfoObject.gameTitle[1];
+			imageAddition(gameInfoObject.console[1], paraFormatting);
+			    for (var g in gameInfoObject) {
+			        var createGameList = document.createElement("p");
+			        paraFormatting.appendChild(createGameList);
+			        var gameTextOutput = gameInfoObject[g][0] + gameInfoObject[g][1];
+			        createGameList.innerHTML = gameTextOutput;
+			    }
+		    } else if (gameInfoObject.console[1] == "Xbox 360" && gameInfoObject.multiplayer[1] == "No") {
+			var gridFormat = document.createElement("div");
+			gridFormat.setAttribute("class", "ui-block-b");
+			createNewDiv.appendChild(gridFormat);
+			var paraFormatting = document.createElement("p");
+			paraFormatting.setAttribute("class", "ui-bar ui-bar-c")
 			gridFormat.appendChild(paraFormatting);
 			var createNewHeader = document.createElement ("h3");
 			createNewHeader.innerHTML = gameInfoObject.gameTitle[1];
