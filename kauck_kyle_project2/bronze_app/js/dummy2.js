@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
 		    var gameInfoObject = JSON.parse(gameValue);
-		    if (gameInfoObject.console[1] == "Xbox 360") {
+		    if (gameInfoObject.console[1] == "Xbox 360" && gameInfoObject.multiplayer[1] == "Yes") {
 			var createNewDiv = document.createElement("div");
 			createNewDiv.setAttribute("class", "ui-grid-a");
 			createInfoDiv.appendChild(createNewDiv);
