@@ -134,6 +134,7 @@ window.addEventListener("DOMContentLoaded", function (){
 	    }
     }
     
+    localStorage.clear();
     var xboxData = idGrabber("container");
         xboxFetch();
     $('#xboxData').trigger('create');
