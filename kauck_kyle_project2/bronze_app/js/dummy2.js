@@ -46,6 +46,13 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
+    function addGameData(){
+	    for (var r in gamingData){
+		    var idGenerator = Math.floor(Math.random()*1000000000);
+		    localStorage.setItem(idGenerator, JSON.stringify(gamingData[r]));
+	    }
+    }
+    
     /*function xboxFetch(){
 	var createInfo = document.getElementById("container");
 	if(localStorage.length === 0){
