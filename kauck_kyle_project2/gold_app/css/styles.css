@@ -14,6 +14,10 @@ May 7, 2013
 	padding-right: 15px;
 }
 
+#consoleImage {
+	vertical-align: middle;
+}
+
 #nameOfApp {
 	font-size: 18px;
 	font-family: Helvetica, Arial, sans-serif;
@@ -44,20 +48,4 @@ May 7, 2013
 	margin-right: 0px;
     margin-bottom: 3px;
     padding-left: 0px;
-}
-
-#gameInfoList {
-    display: block;
-    font-size: 12px;
-    line-height: 120%;
-    background: white;
-    padding-right: 10px;
-    padding-left: 10px;
-    width: 290px;
-}
-
-#gameImage {
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
 }

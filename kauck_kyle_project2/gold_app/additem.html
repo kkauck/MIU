@@ -18,30 +18,21 @@ May 7, 2013
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <title>Game Tracker - Add A Game</title>
     </head>
-    <body>
-    
+    <body id="addMyItem">
     <div class="container">
         <header>
-            <div data-role="header" data-position="fixed" class="header" data-theme="b">
-            	<h1 id="nameOfApp">Game Tracker</h1>
-            <div data-role="navbar">
-            	<ul>
-	            <li><a href="index.html" data-ajax="false">Home</a></li>
-	            <li><a href="#info">Info</a></li>
-	            <li><a href="#about">About</a></li>
-            	</ul>
-            </div>
+            <h1 id="formHeader"><a id="homePage" href="index.html">Game Tracker</a></h1>
+            <!--<h1><a id="homePage" href="index.html">Game Tracker</a></h1>-->
         </header>
-	
         <!-- Creating the form used for this page -->
-        <div class="formContainer" data-role="none">
-	    <form action="#" method="post" id="addGameForm" oninput="ratingOutput.value = ratingInput.valueAsNumber">
-		<fieldset data-role="fieldcontain">
-		    <legend><strong>Add A Game</strong></legend>
+        <div class="formContainer">
+        <form action="#" method="post" id="addGameForm" oninput="ratingOutput.value = ratingInput.valueAsNumber">
+            <fieldset>
+                <legend><strong>Add A Game</strong></legend>
            	<!-- Game Titles Text -->
-		    <label for="denote"><p id="denote">* Denotes A Required Field</p></label>
+                    <label for="denote"><p id="denote">* Denotes A Required Field</p></label>
                     <div id="warningMessage">
-	                <p id="warningSystem"><br /></p>
+	                    <p id="warningSystem"><br /></p>
                     </div>
                     <div id="titleError">
                     	<p><label for="gameTitle">* Game Title: </label><input type="text" id="gameTitle" /></p>
@@ -59,32 +50,33 @@ May 7, 2013
                     	<p><label for="dateAdded">* Date Added: </label><input type="date" id="dateAdded"  /></p>
                     </div>
                     <!-- Radio boxes for if the game have multiplayer -->
-                    <div id="multiplayerError" data-role="none">
+                    <div id="multiplayerError">
                     	<p>* Multiplayer Functionality:<br />
 	                    <input type="radio" name="multiplayer" id="yes" value="Yes" /><label for="yes">Yes</label><br />
 	                    <input type="radio" name="multiplayer" id="no" value="No" /><label for="no">No</label></p>
                     </div>
                     <!-- A range for the rating you give to the game -->
-		    <p><label for="rating">Your Rating: </label><output for="rating" id="output" name="ratingOutput" data-role="none">0</output><strong>/10</strong><input type="range" id="rating" name="ratingInput" min="0" max="10" value="0" /></p>
-		    <!-- Text box for download size of the game if applicable to the game -->
-                    <p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" data-role="none" /></p>
+	                <div id="ratingError">
+                    	<p><label for="rating">Your Rating: </label><output for="rating" id="output" name="ratingOutput">0</output><strong>/10</strong><input type="range" id="rating" name="ratingInput" min="0" max="10" value="0" /></p>
+	                </div>
+                    <!-- Text box for download size of the game if applicable to the game -->
+                    <p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" /></p>
                     <!-- Text area for extra information about the game -->
-                    <p><label for="addInformation">Additional Information: </label><textarea rows="4" cols="50" id="addInformation" placeholder="Please enter any additional information here..." data-role="none"></textarea></p>
+                    <p><label for="addInformation">Additional Information: </label><textarea rows="4" cols="50" id="addInformation" placeholder="Please enter any additional information here..."></textarea></p>
                     <label for="forminfo"></label><input type="hidden" name="forminfo" id="forminfo" value="From Add A Game Form"  />
                     <label for="submitButton"></label><input type="button" id="submitButton" value="Submit my game!" />
-                </fieldset>
-            </form>
-        </div>
-        <div id="gameInfoDisplay"></div>
+            </fieldset>
+        </form>
+        <div id ="gameInfoDisplay"></div>
         <nav>
-           	<a href="#" id="clearData">Clear Stored Data</a>
-           	<a href="#" id="displayData">Display Data</a>
-            <a href="additem.html" id="addNewGame" style="display:none;" data-ajax="false">Add New Game</a>
+            <a href="#" id="clearData">Clear Stored Data</a>
+            <a href="#" id="displayData">Display Data</a>
+            <a href="additem.html" id="addNewGame" style="display:none;">Add New Game</a>
         </nav>
         <footer>
             <p id="thankYou"><small>Thank you for choosing Game Tracker! For all of your game catalogue needs!</small></p>
         </footer>
-	<script src="js/json.js" language="javascript" type="text/javascript"></script>
-        <script src="js/main.js" language="javascript" type="text/javascript"></script>
+        <script src="js/json.js" language="javascript" type="text/javascript"></script>
+        <script src="js/additem.js" language="javascript" type="text/javascript"></script>
     </body>
 </html>
