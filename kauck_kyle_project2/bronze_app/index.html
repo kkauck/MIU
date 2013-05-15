@@ -24,22 +24,289 @@ May 9, 2013
     <!-- Index Page for App -->	
 	<div data-role="page" id="index">
 
-        <header>
-	    <div data-role="header" data-position="fixed" class="header" data-theme="c">
-		<h1 id="nameOfApp">Game Tracker</h1>
-	    </div>
-	</header>
+	    <header>
+	        <div data-role="header" data-position="fixed" class="header" data-theme="c">
+			<h1 id="nameOfApp">Game Tracker</h1>
+	        </div>
+	    </header>
         
 	    <article>
 		<div data-role="content">
 		    <div class="cta">
 			<center><a href="additem.html" data-ajax="false"><img src="img/logoCTA.gif" /></a></center><br />
 		    </div>
-			<div id="xboxData">
-			    <ul data-role="content" data-filter="true">
+		    <div id="browseConsole">
+			<div data-role="collapsible-set">
+			    <h3>Browse Games by Consoles</h3>
+				
+			    <!-- Xbox 360 Set -->
+			    <div data-role="collapsible">
+				<h3>Xbox 360</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Red Dead Redemption</p>
+						<img src="img/xbox360.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Grand Theft Auto</p>
+						<img src="img/xbox360.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>BioShock Infinite</p>
+						<img src="img/xbox360.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Halo 4</p>
+						<img src="img/xbox360.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+				
+			    <!-- Playstation 3 Set -->
+			    <div data-role="collapsible">
+				<h3>Playstation 3</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Walking Dead</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+				    
+			    <!-- Nintendo Wii U Set -->
+			    <div data-role="collapsible">
+				<h3>Nintendo Wii U</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Super Mario Wii U</p>
+						<img src="img/wiiU.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Mass Effect 3</p>
+						<img src="img/wiiU.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/wiiU.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/wiiU.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+				
+			    <!-- PC Set -->
+			    <div data-role="collapsible">
+				<h3>PC</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+				
+				
+			    <!-- Nintendo 3DS Set -->
+			    <div data-role="collapsible">
+				<h3>Nintendo 3DS</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
 			    
-			    </ul>
+			    
+			    <!-- Playstation Vita Set -->
+			    <div data-role="collapsible">
+				<h3>Playstation Vita</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+			    
+			    <!-- iPhone/iPad Set -->
+			    <div data-role="collapsible">
+				<h3>iPhone & iPad</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+			    
+			    
+			    <!-- Android Set -->
+			    <div data-role="collapsible">
+				<h3>Android</h3>
+				<div data-role="ui-gird-a">
+				    <div class="ui-grid-a">
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>MLB The Show 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Dishonored</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-a">
+					    <div class="ui-bar ui-bar-c">
+						<p>Final Fantasy 13</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+					<div class="ui-block-b">
+					    <div class="ui-bar ui-bar-c">
+						<p>Playstation Battle All-Stars</p>
+						<img src="img/playstationThree.gif" />
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
 			</div>
+		    </div>
 		</div>
 	    </article>
 	    
@@ -200,10 +467,237 @@ May 9, 2013
 	    
 	</div>
 	
+	<!-- Xbox 360 Games -->
+    	<div data-role="page" id="xbox360" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="xboxData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+	
+    <!-- PS3 Games -->
+        <div data-role="page" id="ps3" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="ps3Data">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+	
+    <!-- Wii Games -->
+    <div data-role="page" id="wii" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="wiiData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+    <!-- PC Games -->
+    <div data-role="page" id="pc" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="pcData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+    <!-- 3ds Games -->
+    <div data-role="page" id="3ds" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="3dsData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+    <!-- Vita Games -->
+    <div data-role="page" id="vita" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="vitaData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+    <!-- Iphone Games -->
+    <div data-role="page" id="iphone" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="iphoneData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+    <!-- Android Games -->
+    <div data-role="page" id="android" data-add-back-btn="true">
+	    
+	    <header>
+		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		    <h1 id="aboutPage">Game Tracker</h1>
+		</div>
+	    </header>
+	    
+	    <article>
+		<div data-role="content" id="androidData">
+		    
+		</div>
+	    </article>
+	    
+	    <footer>
+		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		    <div data-role="navbar">
+			<ul>
+			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
+			    <li><a href="#news" data-icon="star" data-iconpos="top">News</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </footer>
+	    
+	</div>
+	
     <!-- Javascript/jQM Script Loading -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="js/json.js" language="javascript" type="text/javascript"></script>
-        <script src="js/dummy2.js" language="javascript" type="text/javascript"></script>
+        <script src="js/main.js" language="javascript" type="text/javascript"></script>
         <<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
     </body>
 </html>

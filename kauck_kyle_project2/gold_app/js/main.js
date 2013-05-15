@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", function (){
     	}
 		var createUL = document.createElement("ul");
 		createUL.setAttribute("id", "listCreation");
+		createUL.setAttribute("data-add-back-btn", "true");
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
