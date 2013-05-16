@@ -1,3 +1,10 @@
+/*
+Kyle Kauck
+Project Two
+MIU 1305
+May 13, 2013
+*/
+
 window.addEventListener("DOMContentLoaded", function (){
     
     //Function to get my ID Tags from the HTML

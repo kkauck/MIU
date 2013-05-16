@@ -1,10 +1,14 @@
 Kyle Kauck
 MIU 1305
-Project One
+Project Two
 
 
 Github Commit Link
-https://github.com/g78624/MIU/tree/master/kauck_kyle_project1
+https://github.com/g78624/MIU/tree/master/kauck_kyle_project2
 
-Github Live Link
-http://g78624.github.io/MIU/kauck_kyle_project1/
+
+Github Gold App Live Link
+http://g78624.github.io/MIU/kauck_kyle_project2/gold_app/
+
+Github Bronze App Live Link
+http://g78624.github.io/MIU/kauck_kyle_project2/bronze_app/
