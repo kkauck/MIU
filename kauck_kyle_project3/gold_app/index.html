@@ -215,51 +215,71 @@ May 9, 2013
 	    
 	    <header>
 		<div data-role="header" data-position="fixed" class="header" data-theme="c">
-		    <h1 id="aboutPage">Game Tracker - Add a Game!</h1>
+		    <h1 id="aboutPage">Add a Game!</h1>
 		</div>
 	    </header>
 	    
 	    <article>
 		<div data-role="content" data-filter="true">
 		    <form action="#" method="post" id="addGameForm">
-			<fieldset>
-			    <legend><strong>Add A Game</strong></legend>
-			    <!-- Game Titles Text -->
-			    <label for="denote"><p id="denote">* Denotes A Required Field</p></label>
-			    <div id="warningMessage">
-	    		    <p id="warningSystem"><br /></p>
-			    </div>
-			    <div id="titleError">
-				<p><label for="gameTitle">* Game Title: </label><input type="text" id="gameTitle" /></p>
-			    </div>
-			    <!-- Select and Options for Console Selections -->
-			    <div id="consoleError">
-				<p id="selectConsole"><label for="console">* Console: </label><br /></p>
-			    </div>
-			    <!-- Game Genre Text -->
-			    <div id="genreError">
-				<p><label for="genre">* Genre: </label><input type="text" id="genre"  /></p>
-			    </div>
-			    <!-- Date for when you added the game to the form -->
-			    <div id="dateError">
-				<p><label for="dateAdded">* Date Added: </label><input type="date" id="dateAdded"  /></p>
-			    </div>
-			    <!-- Radio boxes for if the game have multiplayer -->
-			    <div id="multiplayerError">
-				<p>* Multiplayer Functionality:<br />
-				    <input type="radio" name="multiplayer" id="yes" value="Yes" /><label for="yes">Yes</label><br />
-				    <input type="radio" name="multiplayer" id="no" value="No" /><label for="no">No</label></p>
-			    </div>
-			    <!-- A range for the rating you give to the game -->
-			    <p><label for="rating">Your Rating: </label><input type="range" id="rating" name="ratingInput" min="0" max="10" value="0" data-highlight="true"/></p>
-			    <!-- Text box for download size of the game if applicable to the game -->
-			    <p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" /></p>
-			    <!-- Text area for extra information about the game -->
-			    <p><label for="addInformation">Additional Information: </label><textarea rows="4" cols="50" id="addInformation" placeholder="Please enter any additional information here..."></textarea></p>
-			    <label for="forminfo"></label><input type="hidden" name="forminfo" id="forminfo" value="From Add A Game Form"  />
-			    <label for="submitButton"></label><input type="button" id="submitButton" value="Submit my game!" />
-			</fieldset>
+			
+			<div data-role="fieldcontain">
+			    <label for="gameTitle">* Game Title:</label>
+			    <input type="text" name="gameTitle" id="gameTitle" />
+			</div>
+	    
+			<div data-role="fieldcontain">
+			    <label for="consoles">* Consoles:</label>
+			    <select name="consoles" id="consoles" data-native-menu="false" />
+				<option data-place-holder="true">--Please Select A Console--</option>
+				<option value="xbox360">Xbox 360</option>
+				<option value="playstation3">Playstation 3</option>
+				<option value="wiiU">Nintendo Wii U</option>
+				<option value="pc">PC</option>
+				<option value="nintendo3ds">Nintendo 3DS</option>
+				<option value="playstationVita">Playstation Vita</option>
+				<option value="iphone">iPhone/iPad</option>
+				<option value="android">Android</option>
+			    </select>
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <label for="genre">* Genre:</label>
+			    <input type="text" name="genre" id="genre" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <label for="dateAdded">* Date Added:</label>
+			    <input type="date" name="dateAdded" id="dateAdded" placeholder="Date Format: YYYY-MM-DD" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+				<legend>* Multiplayer:</legend>
+				<input type="radio" name="multiplayer" id="yes" value="Yes" checked="checked" />
+				<label for="yes">Yes</label>
+				<input type="radio" name="multiplayer" id="no" value="No" />
+				<label for="no">No</label>
+			    </fieldset>
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <label for="rating">Game Rating:</label>
+			    <input type="range" name="rating" id="rating" min="0" max="10" value="5" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <label for="downloadSize">Download Size:</label>
+			    <input type="text" name="downloadSize" id="downloadSize" />
+			</div>
+			
+			<div data-role="fieldcontain">
+			    <label for="additionalInfo">Additional Information:</label>
+			    <textarea name="additionalInfo" id="additionalInfo" placeholder="Please enter any additional information here..." rows="4" cols="50"></textarea>
+			</div>
+			
 		    </form>
+		    
 		    <!--<div id ="gameInfoDisplay" data-role="content"></div> -->
 		    <nav>
 			<a href="#" id="clearData">Clear Stored Data</a>
@@ -546,6 +566,7 @@ May 9, 2013
 	<!-- Javascript/jQM Script Loading -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="js/json.js" language="javascript" type="text/javascript"></script>
         <script src="js/main.js" language="javascript" type="text/javascript"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
