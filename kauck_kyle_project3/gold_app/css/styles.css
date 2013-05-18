@@ -1,0 +1,98 @@
+/*
+Kyle Kauck
+Project Two
+MIU 1305
+May 13, 2013
+*/
+
+/* Link/Index Styling */
+.cta {
+	text-align: center;
+}
+
+input {
+    box-shadow: 0px 0px 8px rgba(9,17,80,0.4);
+    border: solid 1px black;
+}
+
+input:focus {
+    border: solid 1px #429bb8;
+}
+
+.newsfeedGame {
+	padding-bottom: 10px;
+}
+
+.ghButtons {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#consoleImage {
+	vertical-align: middle;
+}
+
+#nameOfApp {
+	font-size: 18px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* JSON Display */
+
+#gameListInfo {
+	border-bottom: 1px solid rgba(9,17,80,0.56);
+	border-right: 1px solid rgba(9,17,80,0.56);
+	border-left: 1px solid rgba(9,17,80,0.56);
+	padding-top: 0;
+	padding-bottom: 0;
+	width: 310px;
+}
+
+#gameInfoList {
+	display: block;
+}
+
+#gameInfoList:last-child {
+    border-bottom: 1px solid rgba(9,17,80,0.56);
+    padding-bottom: 10px;
+}
+
+#gameInfoList:first-child {
+    font-family: "Tauri", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    background-color: #082863;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Error Display */
+
+.warning {
+	background-color: rgba(245,16,16,0.2);
+    border: 2px solid red;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#warningSystem {
+	display: none;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(245,16,16,0.2);
+    border: 2px solid red;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    padding: 10px 10px;
+}
+
+#errorMessages {
+	color: #272727;
+	background-color: rgba(245,16,16,0);
+	margin-right: 0px;
+    margin-bottom: 3px;
+    padding-left: 0px;
+}
