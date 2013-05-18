@@ -1,13 +1,5 @@
-/*
-Kyle Kauck
-Project Two
-MIU 1305
-May 13, 2013
-*/
-
-window.addEventListener("DOMContentLoaded", function (){
-    
-    //Function to get my ID Tags from the HTML
+$("#index").on("pageinit", function(){
+                
     function idGrabber(y) {
         var idTag = document.getElementById(y);
         return idTag;
@@ -15,8 +7,8 @@ window.addEventListener("DOMContentLoaded", function (){
 
     //Creates all my Xbox Data
     function xboxFetch(){
-	var createInfo = document.getElementById("xboxData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#xboxData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -26,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -56,8 +48,8 @@ window.addEventListener("DOMContentLoaded", function (){
     
         //Creates all my PS3 Data
     function ps3Fetch(){
-	var createInfo = document.getElementById("ps3Data");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#ps3Data");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -66,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -94,10 +86,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my Xbox Data
+    //Creates all my Wii Data
     function wiiFetch(){
-	var createInfo = document.getElementById("wiiData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#wiiData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -106,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -134,10 +126,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my PC Data
+    //Creates all my PC Data
     function pcFetch(){
-	var createInfo = document.getElementById("pcData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#pcData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -146,7 +138,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -174,10 +166,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my 3DS Data
+    //Creates all my 3DS Data
     function dsFetch(){
-	var createInfo = document.getElementById("3dsData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#3dsData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -186,7 +178,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -214,10 +206,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my Vita Data
+    //Creates all my Vita Data
     function vitaFetch(){
-	var createInfo = document.getElementById("vitaData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#vitaData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -226,7 +218,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -254,10 +246,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my Iphone Data
+    //Creates all my Iphone Data
     function iphoneFetch(){
-	var createInfo = document.getElementById("iphoneData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#iphoneData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -266,7 +258,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -294,10 +286,10 @@ window.addEventListener("DOMContentLoaded", function (){
 		}
     }
     
-        //Creates all my Andoird Data
+    //Creates all my Andoird Data
     function androidFetch(){
-	var createInfo = document.getElementById("androidData");
-	createInfo.innerHTML = ("");
+	var createInfo = $("#androidData");
+	createInfo.empty();
 	if(localStorage.length === 0){
 	    addGameData();
     	}
@@ -306,7 +298,7 @@ window.addEventListener("DOMContentLoaded", function (){
 		createUL.setAttribute("data-role", "listview");
 		createUL.setAttribute("data-filter", "true");
 		createUL.setAttribute("data-filter-placeholder", "Search for a game...");
-		createInfo.appendChild(createUL);
+		createInfo.append(createUL);
 		for (var e = 0, f = localStorage.length; e < f; e++) {
 		    var gameKey = localStorage.key(e);
 		    var gameValue = localStorage.getItem(gameKey);
@@ -380,21 +372,59 @@ window.addEventListener("DOMContentLoaded", function (){
     }
 
 //My Even Listeners
-var xboxDisplay = idGrabber("xboxJSON");
-    xboxDisplay.addEventListener("click", xboxFetch)
-var ps3Display = idGrabber("ps3JSON");
-    ps3Display.addEventListener("click", ps3Fetch)
-var wiiDisplay = idGrabber("wiiJSON");
-    wiiDisplay.addEventListener("click", wiiFetch)
-var pcDisplay = idGrabber("pcJSON");
-    pcDisplay.addEventListener("click", pcFetch)
-var dsDisplay = idGrabber("3dsJSON");
-    dsDisplay.addEventListener("click", dsFetch)
-var vitaDisplay = idGrabber("vitaJSON");
-    vitaDisplay.addEventListener("click", vitaFetch)
-var iphoneDisplay = idGrabber("iphoneJSON");
-    iphoneDisplay.addEventListener("click", iphoneFetch)
-var androidDisplay = idGrabber("androidJSON");
-    androidDisplay.addEventListener("click", androidFetch)
+    var xboxDisplay = $("#xboxJSON");
+        xboxDisplay.click(xboxFetch);
+    var ps3Display = $("#ps3JSON");
+        ps3Display.click(ps3Fetch);
+    var wiiDisplay = $("#wiiJSON");
+        wiiDisplay.click(wiiFetch);
+    var pcDisplay = $("#pcJSON");
+        pcDisplay.click(pcFetch);
+    var dsDisplay = $("#3dsJSON");
+        dsDisplay.click(dsFetch);
+    var vitaDisplay = $("#vitaJSON");
+        vitaDisplay.click(vitaFetch);
+    var iphoneDisplay = $("#iphoneJSON");
+        iphoneDisplay.click(iphoneFetch);
+    var androidDisplay = $("#androidJSON");
+        androidDisplay.click(androidFetch);
     
+});	
+		
+$("#addItem").on("pageinit", function(){
+
+		var addGameForm = $("#addGameForm");
+		    addGameForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(data);
+		}
+	});
+	
+	//any other code needed for addItem page goes here
+	
 });
+
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+var autofillData = function (){
+	 
+};
+
+var getData = function(){
+
+};
+
+var storeData = function(data){
+	
+}; 
+
+var deleteItem = function (){
+			
+};
+					
+var clearLocal = function(){
+
+};
