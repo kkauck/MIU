@@ -225,7 +225,7 @@ May 9, 2013
 			
 			<div data-role="fieldcontain">
 			    <label for="gameTitle">* Game Title:</label>
-			    <input type="text" name="gameTitle" id="gameTitle" />
+			    <input type="text" name="gameTitle" id="gameTitle" placeholder="Please enter the name of your game..." />
 			</div>
 	    
 			<div data-role="fieldcontain">
@@ -244,8 +244,9 @@ May 9, 2013
 			</div>
 			
 			<div data-role="fieldcontain">
-			    <label for="genre">* Genre:</label>
-			    <input type="text" name="genre" id="genre" />
+			    <label for="genre">* Genre of Game:</label>
+			    <input type="text" name="genre" id="genre" placeholder="Please enter the genre of the game..." /><br />
+			    <span>Ex. Shooter/RPG</span>
 			</div>
 			
 			<div data-role="fieldcontain">
@@ -270,12 +271,20 @@ May 9, 2013
 			
 			<div data-role="fieldcontain">
 			    <label for="downloadSize">Download Size:</label>
-			    <input type="text" name="downloadSize" id="downloadSize" />
+			    <input type="text" name="downloadSize" id="downloadSize" placeholder="Please enter download size if applicable..." />
 			</div>
 			
 			<div data-role="fieldcontain">
 			    <label for="additionalInfo">Additional Information:</label>
 			    <textarea name="additionalInfo" id="additionalInfo" placeholder="Please enter any additional information here..." rows="4" cols="50"></textarea>
+			</div>
+			
+			<div class="ui-grid-a">
+			    <div class="ui-block-a"><button type="button" data-theme="c">Clear Game Data</button></div>
+			    <div class="ui-block-b"><button type="button" data-theme="c">Display Games</button></div>
+			</div>
+			<div class="ui-grid-solo">
+			    <div class="ui-block-a"><input value="Add My Game!" data-theme="b" type="submit"></div>
 			</div>
 			
 		    </form>
