@@ -392,16 +392,52 @@ $("#index").on("pageinit", function(){
 });	
 		
 $("#addItem").on("pageinit", function(){
+                
+                
+    //Default Date
+    function todaysDate(){
+        var todaysDate = new Date();
+        var currentYear = todaysDate.getFullYear();
+        var currentMonth = todaysDate.getMonth() +1;
+        var currentDay = todaysDate.getDate();
+    
+        if (currentMonth < 10) {
+            currentMonth = "0" + currentMonth;
+        };
+    
+        if (currentDay <10) {
+            currentDay = "0" + currentDay;
+        };
 
+        var today = (currentYear) + "/" + (currentMonth) + "/" + (currentDay);
+    
+        return today;
+    };
+    
+    //Adding Default Date to Application
+    $('#dateAdded').val(todaysDate);
+    
 		var addGameForm = $("#addGameForm");
-		    addGameForm.validate({
-			invalidHandler: function(form, validator) {
-			},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData(data);
-		}
+                var errorLink = $("#formErrorPopUp");
+                
+		addGameForm.validate({
+		    invalidHandler: function(form, validator) {
+                        errorLink.click();
+                        var html = "";
+                        for (var errorKey in validator.submitted){
+                            var errorLabel = $('label[for^="'+ errorKey +'"]').not('.error');
+                            html += "<li>" + errorLabel.text() +"</li>"
+                        };
+                        $("#gameError ul").html(html);
+		},
+		
+                submitHandler: function() {
+		    var data = addGameForm.serializeArray();
+		    storeData(data);
+                }
+		
 	});
+
 	
 	//any other code needed for addItem page goes here
 	
