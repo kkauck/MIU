@@ -416,7 +416,6 @@ $("#addItem").on("pageinit", function(){
     
     //Adding Default Date to Application
     $('#dateAdded').val(todaysDate);
-    $('input#dateAdded').datepicker();
     
 		var addGameForm = $("#addGameForm");
                 var errorLink = $("#formErrorPopUp");
