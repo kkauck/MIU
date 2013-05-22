@@ -162,6 +162,7 @@ textarea {
 
 #errorMessages {
 	color: #272727;
+	display: block;
 	background-color: rgba(245,16,16,0);
 	margin-right: 0px;
     margin-bottom: 3px;
