@@ -46,6 +46,20 @@ input:focus {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+#submitButton {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f5f6f6;
+    border-radius: 15px;
+    background-color: #23345f;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    height: 45px;
+    width: 200px;
+}
+
 /* JSON Display */
 
 #gameListInfo {
@@ -78,6 +92,50 @@ input:focus {
 }
 
 /* Form Display */
+
+#gameTitle {
+    display: block;
+    width: 290px;
+    height: 20px;
+}
+
+#consoles {
+    display: block;
+    width: 300px;
+    height: 20px;
+}
+
+#genre {
+    display: block;
+    width: 290px;
+    height: 20px;
+}
+
+#dateAdded {
+    display: block;
+    width: 290px;
+    height: 20px;
+}
+
+#rating {
+    display: block;
+    width: 290px;
+    height: 20px;
+}
+
+#download {
+    display: block;
+    width: 290px;
+    height: 20px;
+}
+
+textarea {
+    display: block;
+    box-shadow: 0px 0px 8px rgba(9,17,80,0.4);
+    width: 290px;
+    height: 150px;
+    border: solid 1px black;
+}
 
 #inputHint {
 	font-size: 14px;
