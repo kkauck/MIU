@@ -630,7 +630,12 @@ var storeData = function(data, gameKey){
 	    }
     }
     
-
+    function reloadMyForm(){
+	window.location.reload();
+    }
+    
+var resetForm = $("#resetTheForm");
+    resetForm.click(reloadMyForm);
 var clearData 	= $("#clearData");
     clearData.click(clearLocal);
 var displayData = $("#displayData");
