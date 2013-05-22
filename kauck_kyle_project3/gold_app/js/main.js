@@ -629,6 +629,7 @@ var storeData = function(data, gameKey){
 		    localStorage.setItem(idGenerator, JSON.stringify(gamingData[r]));
 	    }
     }
+    
 
 var clearData 	= $("#clearData");
     clearData.click(clearLocal);

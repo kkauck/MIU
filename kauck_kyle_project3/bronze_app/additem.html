@@ -35,7 +35,7 @@ May 13, 2013
 	                    <p id="warningSystem"><br /></p>
                     </div>
                     <div id="titleError">
-                    	<p><label for="gameTitle">* Game Title: </label><input type="text" id="gameTitle" /></p>
+                    	<p><label for="gameTitle">* Game Title: </label><input type="text" id="gameTitle" placeholder="Please enter the games title..."/></p>
                     </div>
                     <!-- Select and Options for Console Selections -->
                     <div id="consoleError">
@@ -43,24 +43,25 @@ May 13, 2013
                     </div>
                     <!-- Game Genre Text -->
                     <div id="genreError">
-                    	<p><label for="genre">* Genre: </label><input type="text" id="genre"  /></p>
+                    	<p><label for="genre">* Genre: </label><input type="text" id="genre" placeholder="Enter the genre of your game..."  /></p>
                     </div>
                     <!-- Date for when you added the game to the form -->
                     <div id="dateError">
-                    	<p><label for="dateAdded">* Date Added: </label><input type="date" id="dateAdded"  /></p>
+                    	<p><label for="dateAdded">* Date Added: </label><input type="date" id="dateAdded"  /><br />
+			<span id="inputHint">Date Format: YYYY MM DD</span></p>
                     </div>
                     <!-- Radio boxes for if the game have multiplayer -->
                     <div id="multiplayerError">
                     	<p>* Multiplayer Functionality:<br />
 	                    <input type="radio" name="multiplayer" id="yes" value="Yes" /><label for="yes">Yes</label><br />
-	                    <input type="radio" name="multiplayer" id="no" value="No" /><label for="no">No</label></p>
+	                    <input type="radio" checked="checked" name="multiplayer" id="no" value="No" /><label for="no">No</label></p>
                     </div>
                     <!-- A range for the rating you give to the game -->
 	                <div id="ratingError">
-                    	<p><label for="rating">Your Rating: </label><output for="rating" id="output" name="ratingOutput">0</output><strong>/10</strong><input type="range" id="rating" name="ratingInput" min="0" max="10" value="0" /></p>
+                    	<p><label for="rating">Your Rating: </label><output for="rating" id="output" name="ratingOutput">0</output><strong>/10</strong><input type="range" id="rating" name="ratingInput" min="0" max="10" value="5" /></p>
 	                </div>
                     <!-- Text box for download size of the game if applicable to the game -->
-                    <p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" /></p>
+                    <p><label for="download">Download Size (If Applicable): </label><input type="text" id="download" placeholder="Enter games download size if applicable..."/></p>
                     <!-- Text area for extra information about the game -->
                     <p><label for="addInformation">Additional Information: </label><textarea rows="4" cols="50" id="addInformation" placeholder="Please enter any additional information here..."></textarea></p>
                     <label for="forminfo"></label><input type="hidden" name="forminfo" id="forminfo" value="From Add A Game Form"  />

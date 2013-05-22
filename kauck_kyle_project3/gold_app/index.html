@@ -229,12 +229,12 @@ May 9, 2013
 			
 			<div data-role="fieldcontain">
 			    <label for="gameTitle">* Game Title:</label>
-			    <input type="text" name="gameTitle" id="gameTitle" class="required" placeholder="Please enter the name of your game..." />
+			    <input type="text" name="gameTitle" id="gameTitle" autocomplete="off" class="required" placeholder="Please enter the name of your game..." />
 			</div>
 	    
-			<div data-role="fieldcontain">
+			<div id="selectConsole" data-role="fieldcontain">
 			    <label for="consoles">* Consoles:</label>
-			    <select name="consoles" id="consoles" data-native-menu="false" class="required" />
+			    <select name="consoles" id="consoles" autocomplete="off" data-native-menu="false" class="required" />
 				<option data-place-holder="true" value>--Please Select A Console--</option>
 				<option value="Xbox 360">Xbox 360</option>
 				<option value="Playstation 3">Playstation 3</option>
@@ -249,13 +249,14 @@ May 9, 2013
 			
 			<div data-role="fieldcontain">
 			    <label for="genre">* Genre of Game:</label>
-			    <input type="text" name="genre" id="genre" class="required" placeholder="Please enter the genre of the game..." />
+			    <input type="text" name="genre" id="genre" class="required" autocomplete="off" placeholder="Please enter the genre of the game..." />
 			    <span id="example">Ex. Shooter/RPG</span>
 			</div>
 			
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" id="dateAddition">
 			    <label for="dateAdded">* Date Added:</label>
-			    <input type="date" name="dateAdded" id="dateAdded" class="required" placeholder="Date Format: YYYY-MM-DD" />
+			    <input type="date" name="dateAdded" id="dateAdded" class="required" autocomplete="off" placeholder="Date Format: YYYY-MM-DD" />
+			    <span id="example">Date Format: YYYY MM DD</span>
 			</div>
 			
 			<div data-role="fieldcontain">
@@ -275,12 +276,12 @@ May 9, 2013
 			
 			<div data-role="fieldcontain">
 			    <label for="downloadSize">Download Size:</label>
-			    <input type="text" name="downloadSize" id="downloadSize" placeholder="Please enter download size if applicable..." />
+			    <input type="text" name="downloadSize" id="downloadSize" autocomplete="off" placeholder="Please enter download size if applicable..." />
 			</div>
 			
 			<div data-role="fieldcontain">
 			    <label for="additionalInfo">Additional Information:</label>
-			    <textarea name="additionalInfo" id="additionalInfo" placeholder="Please enter any additional information here..." rows="4" cols="50"></textarea>
+			    <textarea name="additionalInfo" id="additionalInfo" autocomplete="off" placeholder="Please enter any additional information here..." rows="4" cols="50"></textarea>
 			</div>
 			
 			<div class="ui-grid-solo">
@@ -325,9 +326,8 @@ May 9, 2013
 		<h1>Fields Missing:</h1>
 	    </div>
 	    
-	    <div data-role="content">
-		<ul>
-		    <li>Hello</li>
+	    <div data-role="content" id="errorMessages">
+		<ul id="errorDisplayMessage">
 		</ul>
 	    </div>
 	    
