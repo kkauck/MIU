@@ -371,7 +371,7 @@ $("#index").on("pageinit", function(){
 	    }
     }
 
-//My Even Listeners
+//My Event Listeners
     var xboxDisplay = $("#xboxJSON");
         xboxDisplay.click(xboxFetch);
     var ps3Display = $("#ps3JSON");
@@ -392,59 +392,145 @@ $("#index").on("pageinit", function(){
 });	
 		
 $("#addItem").on("pageinit", function(){
-                
-                
-    //Default Date
-    function todaysDate(){
-        var todaysDate = new Date();
-        var currentYear = todaysDate.getFullYear();
-        var currentMonth = todaysDate.getMonth() +1;
-        var currentDay = todaysDate.getDate();
-    
-        if (currentMonth < 10) {
-            currentMonth = "0" + currentMonth;
-        };
-    
-        if (currentDay <10) {
-            currentDay = "0" + currentDay;
-        };
-
-        var today = (currentYear) + "/" + (currentMonth) + "/" + (currentDay);
-    
-        return today;
-    };
-    
-    //Adding Default Date to Application
-    $('#dateAdded').val(todaysDate);
     
 		var addGameForm = $("#addGameForm");
                 var errorLink = $("#formErrorPopUp");
                 
 		addGameForm.validate({
 		    invalidHandler: function(form, validator) {
-                        errorLink.click();
-                        var html = "";
-                        for (var errorKey in validator.submitted){
-                            var errorLabel = $('label[for^="'+ errorKey +'"]').not('.error');
-                            html += "<li>" + errorLabel.text() +"</li>"
-                        };
-                        $("#gameError ul").html(html);
+            	errorLink.click();
+                var html = "";
+                for (var errorKey in validator.submitted){
+                	var errorLabel = $('label[for^="'+ errorKey +'"]').not('.error');
+                    html += "<li>" + errorLabel.text() +"</li>"
+                };
+                $("#gameError ul").html(html);
 		},
 		
-                submitHandler: function() {
-		    var data = addGameForm.serializeArray();
-		    storeData(data);
-                    window.location.reload();
-                }
+            submitHandler: function() {
+		        var data = addGameForm.serializeArray();
+		        storeData(data);
+                window.location.reload();
+            }
 		
 	});
 
 	
-	//any other code needed for addItem page goes here
-	
 });
 
-//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+//This will store all data from the form into Local Storage
+var storeData = function(data, gameKey){
+    
+    if (!gameKey) {
+        	var idGenerator = Math.floor(Math.random()*1000000000);
+        } else {
+	    	idGenerator = gameKey;    
+        }
+                
+       var idGenerator = Math.floor(Math.random()*1000000000);
+       var multiplayerSelection = $("input[name=multiplayer]:checked").val();
+       var gameLibrary = {
+           gameTitle  :["", $("#gameTitle").val()],
+           console    :["<strong>Console:</strong> ", $("#consoles").val()],
+           genre      :["<strong>Genre:</strong> ", $("#genre").val()],
+           dateAdded  :["<strong>Date Added:</strong> ", $("#dateAdded").val()],
+           rating     :["<strong>Rating:</strong> ", $("#rating").val()],
+           multiplayer:["<strong>Multiplayer Functionality:</strong> ", multiplayerSelection],
+           download   :["<strong>Download Size:</strong> ", $("#downloadSize").val()],
+           additional :["<strong>Additional Information:</strong> ", $("#additionalInfo").val()]
+        };
+        localStorage.setItem(idGenerator, JSON.stringify(gameLibrary));
+        alert("Game Information Has Been Saved!");
+};
+
+//This will display all of the data that is inside of local storage
+var getData = function(){
+                
+	if(localStorage.length === 0){
+		alert("You currently have no data in local storage, game data will be automatically added");
+	    addGameData();
+    }
+	var createInfo = document.getElementById("gameInfoDisplay");
+	    for (var e = 0, f = localStorage.length; e < f; e++) {
+			var gameKey = localStorage.key(e);
+		    var gameValue = localStorage.getItem(gameKey);
+		    var gameInfoObject = JSON.parse(gameValue);
+            var gameList = document.createElement("p");
+			gameList.setAttribute("id", "gameListInfo");
+			createInfo.appendChild(gameList);
+			var listButtons = document.createElement("span");
+			listButtons.setAttribute("id", "listButtons");
+			imageAddition(gameInfoObject.console[1], gameList);
+            for (var g in gameInfoObject) {
+				var createGameList = document.createElement("span");
+                createGameList.setAttribute("id", "gameInfoList");
+				gameList.appendChild(createGameList);
+				var gameTextOutput = gameInfoObject[g][0] + gameInfoObject[g][1];
+				createGameList.innerHTML = gameTextOutput;
+				gameList.appendChild(listButtons)
+            }
+            createButtons(localStorage.key(e), listButtons);
+		}
+                
+};
+
+//Creates my buttons to delete and edit single games
+function createButtons(gameKey, listButtons){
+	/* Removed due to not working yet
+    var createEditButton = document.createElement("a");
+	createEditButton.setAttribute("id", "createdButton");
+	createEditButton.href = "#addItem";
+	createEditButton.key = gameKey;
+	createEditButton.innerHTML = "Edit Game";
+	createEditButton.addEventListener("click", editMyGame)
+	listButtons.appendChild(createEditButton);*/
+	    
+	var createDeleteButton = document.createElement("a");
+	createDeleteButton.setAttribute("id", "createdButton");
+	createDeleteButton.href = "#index";
+	createDeleteButton.key = gameKey;
+	createDeleteButton.innerHTML = "Delete Game";
+	createDeleteButton.addEventListener("click", deleteMyGame);
+	listButtons.appendChild(createDeleteButton);
+}
+
+//This function will add an image into my display
+//Displays it only for my "Display Item Page"
+function imageAddition(consoleValue, newLi){
+	if(consoleValue === "Xbox 360"){
+		var imageTag = document.createElement("img");
+	    imageTag.setAttribute("src", "img/xbox360.gif");
+	   	newLi.appendChild(imageTag);
+	} else if (consoleValue === "Playstation 3") {
+	    var imageTag = document.createElement("img");
+	    var imageSource = imageTag.setAttribute("src", "img/playstationThree.gif");
+	    newLi.appendChild(imageTag);
+	} else if (consoleValue === "Wii U") {
+	    var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/wiiU.gif");
+	   	newLi.appendChild(imageTag);  
+	} else if (consoleValue === "PC") {
+	   	var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/pc.gif");
+	   	newLi.appendChild(imageTag);
+	} else if (consoleValue === "Playstation Vita") {
+	    var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/playstationVita.gif");
+	   	newLi.appendChild(imageTag);
+	} else if (consoleValue === "Nintendo 3DS") {
+	    var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/nintendo3ds.gif");
+	   	newLi.appendChild(imageTag);
+	} else if (consoleValue === "iPhone/iPad") {
+	    var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/iPhone.gif");
+	   	newLi.appendChild(imageTag);
+	} else if (consoleValue === "Android") {
+	    var imageTag = document.createElement("img");
+	   	var imageSource = imageTag.setAttribute("src", "img/android.gif");
+	   	newLi.appendChild(imageTag);
+	}
+}
 
 
 /*Edit Function not yet working correctly!
@@ -480,64 +566,6 @@ var editMyGame = function (){
 };*/
 
 
-//This will display all of the data that is inside of local storage
-var getData = function(){
-                
-    	if(localStorage.length === 0){
-	    	alert("You currently have no data in local storage, game data will be automatically added");
-	    	addGameData();
-    	}
-		var createInfo = document.getElementById("gameInfoDisplay");
-		for (var e = 0, f = localStorage.length; e < f; e++) {
-		    var gameKey = localStorage.key(e);
-		    var gameValue = localStorage.getItem(gameKey);
-		    var gameInfoObject = JSON.parse(gameValue);
-            var gameList = document.createElement("p");
-			gameList.setAttribute("id", "gameListInfo");
-			createInfo.appendChild(gameList);
-			var listButtons = document.createElement("span");
-			listButtons.setAttribute("id", "listButtons");
-			imageAddition(gameInfoObject.console[1], gameList);
-            for (var g in gameInfoObject) {
-				var createGameList = document.createElement("span");
-                createGameList.setAttribute("id", "gameInfoList");
-				gameList.appendChild(createGameList);
-				var gameTextOutput = gameInfoObject[g][0] + gameInfoObject[g][1];
-				createGameList.innerHTML = gameTextOutput;
-				gameList.appendChild(listButtons)
-            }
-            createButtons(localStorage.key(e), listButtons);
-		}
-                
-};
-
-
-//This will store all data from the form into Local Storage
-var storeData = function(data, gameKey){
-    
-    if (!gameKey) {
-        	var idGenerator = Math.floor(Math.random()*1000000000);
-        } else {
-	    	idGenerator = gameKey;    
-        }
-                
-       var idGenerator = Math.floor(Math.random()*1000000000);
-        var multiplayerSelection = $("input[name=multiplayer]:checked").val();
-        var gameLibrary = {
-            gameTitle  :["", $("#gameTitle").val()],
-            console    :["<strong>Console:</strong> ", $("#consoles").val()],
-            genre      :["<strong>Genre:</strong> ", $("#genre").val()],
-            dateAdded  :["<strong>Date Added:</strong> ", $("#dateAdded").val()],
-            rating     :["<strong>Rating:</strong> ", $("#rating").val()],
-            multiplayer:["<strong>Multiplayer Functionality:</strong> ", multiplayerSelection],
-            download   :["<strong>Download Size:</strong> ", $("#downloadSize").val()],
-            additional :["<strong>Additional Information:</strong> ", $("#additionalInfo").val()]
-        };
-        localStorage.setItem(idGenerator, JSON.stringify(gameLibrary));
-        alert("Game Information Has Been Saved!");
-};
-
-
 //This will ask the user if they would like to delete a single game.
     var deleteMyGame = function (){
                 
@@ -556,6 +584,7 @@ var storeData = function(data, gameKey){
                 
 	    if(localStorage.length === 0){
 		alert("You have no saved data to delete.");    
+		window.location.reload();
 	    } else {
 		localStorage.clear();
 		alert("You have successfully cleared your data");
@@ -564,75 +593,19 @@ var storeData = function(data, gameKey){
 	    }
 };
 
-    //Creates my buttons to delete and edit single games
-    function createButtons(gameKey, listButtons){
-	   /* Removed due to not working yet
-            var createEditButton = document.createElement("a");
-	    createEditButton.setAttribute("id", "createdButton");
-	    createEditButton.href = "#addItem";
-	    createEditButton.key = gameKey;
-	    createEditButton.innerHTML = "Edit Game";
-	    createEditButton.addEventListener("click", editMyGame)
-	    listButtons.appendChild(createEditButton);*/
-	    
-	    var createDeleteButton = document.createElement("a");
-	    createDeleteButton.setAttribute("id", "createdButton");
-	    createDeleteButton.href = "#index";
-	    createDeleteButton.key = gameKey;
-	    createDeleteButton.innerHTML = "Delete Game";
-	    createDeleteButton.addEventListener("click", deleteMyGame);
-	    listButtons.appendChild(createDeleteButton);
-    }
+    
+//Add game data if none is in local storage!
+function addGameData(){
+	for (var r in gamingData){
+		var idGenerator = Math.floor(Math.random()*1000000000);
+		localStorage.setItem(idGenerator, JSON.stringify(gamingData[r]));
+	}
+}
 
-    //This function will add an image into my display
-    //Displays it only for my "Display Item Page"
-    function imageAddition(consoleValue, newLi){
-	    if(consoleValue === "Xbox 360"){
-	    	var imageTag = document.createElement("img");
-	    	imageTag.setAttribute("src", "img/xbox360.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "Playstation 3") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/playstationThree.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "Wii U") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/wiiU.gif");
-	    	newLi.appendChild(imageTag);  
-	    } else if (consoleValue === "PC") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/pc.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "Playstation Vita") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/playstationVita.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "Nintendo 3DS") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/nintendo3ds.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "iPhone/iPad") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/iPhone.gif");
-	    	newLi.appendChild(imageTag);
-	    } else if (consoleValue === "Android") {
-	    	var imageTag = document.createElement("img");
-	    	var imageSource = imageTag.setAttribute("src", "img/android.gif");
-	    	newLi.appendChild(imageTag);
-	    }
-    }
-    
-    //Add game data if none is in local storage!
-    function addGameData(){
-	    for (var r in gamingData){
-		    var idGenerator = Math.floor(Math.random()*1000000000);
-		    localStorage.setItem(idGenerator, JSON.stringify(gamingData[r]));
-	    }
-    }
-    
-    function reloadMyForm(){
+//Will reload the form when the reset button is clicked    
+function reloadMyForm(){
 	window.location.reload();
-    }
+}
     
 var resetForm = $("#resetTheForm");
     resetForm.click(reloadMyForm);
