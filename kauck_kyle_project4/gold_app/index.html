@@ -16,16 +16,17 @@ May 9, 2013
         <meta name="keywords" content="Games,Video Games,Tracking,Catalogue" />
         <meta name="author" content="Kyle Kauck" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/themes/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
         <title>Game Tracker</title>
     </head>
     <body id="mainPage">
     	
 	<!-- Index Page for App -->	
-	<div data-role="page" id="index" data-add-back-btn="true">
+	<div data-role="page" id="index" data-add-back-btn="true" data-theme="a">
 	
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="nameOfApp">Game Tracker</h1>
 		</div>
 	    </header>
@@ -35,9 +36,9 @@ May 9, 2013
 		    <div class="cta">
 			<a href="#addItem"><img src="img/cta.jpg" /></a>
 		    </div>
-		    <div class="browseCategories">
+		    <div class="browseCategories" data-theme="a">
 			<br />
-			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search for a console..." data-inset="true" data-theme="c">
+			<ul data-role="listview" data-filter="true" data-theme="a" data-filter-placeholder="Search for a console..." data-inset="true">
 			    <li data-role="list-divider" data-theme="a">Browse Games by Console...</li>
 			    <li id="xboxJSON"><a href="#xbox360"><img src="img/360icon.gif" class="ui-li-icon">Xbox 360</a></li>
 			    <li id="ps3JSON"><a href="#ps3"><img src="img/ps3Icon.gif" class="ui-li-icon">Playstation 3</a></li>
@@ -53,10 +54,10 @@ May 9, 2013
 	    </article>
 		    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
-			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
+			    <li><a href="#index" data-icon="home" data-iconpos="top" class="ui-btn-active ui-state-persist">Home</a></li>
 			    <li><a href="#info" data-icon="info" data-iconpos="top">Info</a></li>
 			    <li><a href="#news" data-icon="star" data-iconpos="top">Recently Added</a></li>
 			</ul>
@@ -66,10 +67,10 @@ May 9, 2013
 	</div>
 		
 	<!-- Info Page for App -->
-	<div data-role="page" id="info" data-add-back-btn="true">
+	<div data-role="page" id="info" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="aboutPage">Game Tracker Info</h1>
 		</div>
 	    </header>
@@ -101,7 +102,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -115,10 +116,10 @@ May 9, 2013
 	</div>	
 	
 	<!-- News Page for App -->
-	<div data-role="page" id="news" data-add-back-btn="true">
+	<div data-role="page" id="news" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="aboutPage">Game Newsfeed</h1>
 		</div>
 	    </header>
@@ -128,10 +129,10 @@ May 9, 2013
 		    <div class="cta">
 			<a href="#addItem"><img src="img/cta.jpg" /></a>
 		    </div>
-		    <div class="newsStream">
+		    <div class="newsStream" data-theme="a">
 			<br />
 			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search recently added games..." data-inset="true">
-			    <li data-role="list-divider">Games You Added Today!</li>
+			    <li data-role="list-divider" data-theme="a">Games You Added Today!</li>
 			    <li><a href="#error">
 				<h3>Borderlands 2</h3>
 				<p class="newsfeedGame">Console: Xbox 360</p>
@@ -148,7 +149,7 @@ May 9, 2013
 				<h3>Dishonored</h3>
 				<p class="newsfeedGame">Console: Playstation 4</p>
 			    </a></li>
-			    <li data-role="list-divider">Games You Added Yesterday</li>
+			    <li data-role="list-divider" data-theme="a">Games You Added Yesterday</li>
 			    <li><a href="#error">
 				<h3>Madden 13</h3>
 				<p class="newsfeedGame">Console: Xbox 360</p>
@@ -167,7 +168,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -181,10 +182,10 @@ May 9, 2013
 	</div>
 		
 	<!-- Error Page -->
-	<div data-role="page" id="error" data-add-back-btn="true">
+	<div data-role="page" id="error" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="aboutPage">Game Tracker</h1>
 		</div>
 	    </header>
@@ -197,7 +198,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -211,10 +212,10 @@ May 9, 2013
 	</div>
 		
 	<!-- Add Item Page! -->
-	<div data-role="page" id="addItem" data-add-back-btn="true">
+	<div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="aboutPage">Add a Game!</h1>
 		</div>
 	    </header>
@@ -285,11 +286,11 @@ May 9, 2013
 			</div>
 			
 			<div class="ui-grid-solo">
-			    <div class="ui-block-a"><input value="Add My Game!" id="submitGame" data-theme="b" type="submit"></div>
+			    <div class="ui-block-a"><input value="Add My Game!" id="submitGame" data-theme="a" type="submit"></div>
 			</div>
 			
 			<div class="ui-grid-solo">
-			    <div class="ui-block-a"><input value="Reset Form!" type="reset" id="resetTheForm"></div>
+			    <div class="ui-block-a"><input value="Reset Form!" type="reset" id="resetTheForm" data-theme="c"></div>
 			</div>
 			
 			<a href="#gameError" id="formErrorPopUp" data-rel="dialog" data-transition="pop">Errors!</a>
@@ -298,15 +299,15 @@ May 9, 2013
 		    
 		    <nav>
 			<fieldset class="ui-grid-a">
-			    <div class="ui-block-a"><a href="#" data-role="button" id="clearData">Clear Data</a></div>
-			    <div class="ui-block-b"><a href="#display" data-role="button" id="displayData">Display</a></div>
+			    <div class="ui-block-a"><a href="#" data-role="button" id="clearData" data-theme="c">Clear Data</a></div>
+			    <div class="ui-block-b"><a href="#display" data-role="button" id="displayData" data-theme="c">Display</a></div>
 			</fieldset>
 		    </nav>
 		</div>
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -320,9 +321,9 @@ May 9, 2013
 	</div>
 		
 	<!-- Pop Up Error Page -->
-	<div data-role="dialog" id="gameError">
+	<div data-role="dialog" id="gameError" data-theme="a">
 	    
-	    <div data-role="header" data-position="fixed" data-theme="c">
+	    <div data-role="header" data-position="fixed" data-theme="a">
 		<h1>Fields Missing:</h1>
 	    </div>
 	    
@@ -337,7 +338,7 @@ May 9, 2013
 	<div data-role="page" id="display" data-add-back-btn="true">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="displayAllGames">Game Tracker</h1>
 		</div>
 	    </header>
@@ -349,7 +350,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -363,10 +364,10 @@ May 9, 2013
 	</div>
 	
 	<!-- Xbox 360 Games -->
-	<div data-role="page" id="xbox360" data-add-back-btn="true">
+	<div data-role="page" id="xbox360" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="xboxTitle">Xbox 360 Games</h1>
 		</div>
 	    </header>
@@ -378,7 +379,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -392,10 +393,10 @@ May 9, 2013
 	</div>
 	
 	<!-- PS3 Games -->
-	<div data-role="page" id="ps3" data-add-back-btn="true">
+	<div data-role="page" id="ps3" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="ps3Title">Playstation 3 Games</h1>
 		</div>
 	    </header>
@@ -407,7 +408,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -421,10 +422,10 @@ May 9, 2013
 	</div>
 	
 	<!-- Wii Games -->
-	<div data-role="page" id="wii" data-add-back-btn="true">
+	<div data-role="page" id="wii" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="wiiTitle">Wii Games</h1>
 		</div>
 	    </header>
@@ -436,7 +437,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -450,10 +451,10 @@ May 9, 2013
 	</div>
     
 	<!-- PC Games -->
-	<div data-role="page" id="pc" data-add-back-btn="true">
+	<div data-role="page" id="pc" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="pcTitle">PC Games</h1>
 		</div>
 	    </header>
@@ -465,7 +466,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -479,10 +480,10 @@ May 9, 2013
 	</div>
     
 	<!-- 3ds Games -->
-	<div data-role="page" id="3ds" data-add-back-btn="true">
+	<div data-role="page" id="3ds" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="3dsTitle">Nintendo 3DS Games</h1>
 		</div>
 	    </header>
@@ -494,7 +495,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -508,10 +509,10 @@ May 9, 2013
 	</div>
     
 	<!-- Vita Games -->
-	<div data-role="page" id="vita" data-add-back-btn="true">
+	<div data-role="page" id="vita" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="vitaTitle">Playstation Vita Games</h1>
 		</div>
 	    </header>
@@ -523,7 +524,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -537,10 +538,10 @@ May 9, 2013
 	</div>
     
 	<!-- Iphone Games -->
-	<div data-role="page" id="iphone" data-add-back-btn="true">
+	<div data-role="page" id="iphone" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="iphoneTitle">iPhone/iPad Games</h1>
 		</div>
 	    </header>
@@ -552,7 +553,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
@@ -566,10 +567,10 @@ May 9, 2013
 	</div>
     
 	<!-- Android Games -->
-	<div data-role="page" id="android" data-add-back-btn="true">
+	<div data-role="page" id="android" data-add-back-btn="true" data-theme="a">
 	    
 	    <header>
-		<div data-role="header" data-position="fixed" class="header" data-theme="c">
+		<div data-role="header" data-position="fixed" class="header" data-theme="a">
 		    <h1 id="androidTitle">Android Games</h1>
 		</div>
 	    </header>
@@ -581,7 +582,7 @@ May 9, 2013
 	    </article>
 	    
 	    <footer>
-		<div data-role="footer" data-position="fixed" data-theme="c" data-id="footerNav" class="footer">
+		<div data-role="footer" data-position="fixed" data-theme="a" data-id="footerNav" class="footer">
 		    <div data-role="navbar">
 			<ul>
 			    <li><a href="#index" data-icon="home" data-iconpos="top">Home</a></li>
