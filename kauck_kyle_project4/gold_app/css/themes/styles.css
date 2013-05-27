@@ -515,3 +515,9 @@ a.ui-link-inherit {
 	outline-width: 1px;
 	outline-style: auto;
 }
+
+
+.ui-header .ui-title {
+    margin-right: 10%;
+    margin-left: 10%;
+}
