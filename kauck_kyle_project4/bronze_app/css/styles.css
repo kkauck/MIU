@@ -1,9 +1,42 @@
 /*
 Kyle Kauck
-Project Two
+Project Four
 MIU 1305
-May 13, 2013
+May 26, 2013
 */
+
+/* Body Styling */
+
+body {
+	background: #4d4d4d /*{a-body-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #545454 /*{a-body-background-start}*/), to( #454545 /*{a-body-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #545454 /*{a-body-background-start}*/, #454545 /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #545454 /*{a-body-background-start}*/, #454545 /*{a-body-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #545454 /*{a-body-background-start}*/, #454545 /*{a-body-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #545454 /*{a-body-background-start}*/, #454545 /*{a-body-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #545454 /*{a-body-background-start}*/, #454545 /*{a-body-background-end}*/);
+	color: white;
+}
+
+#formHeader {
+	background: repeat #c1272d;
+	font-family: Tahoma;
+	color: white;
+	margin-top: -10px;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.logo {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#homePage {
+	font-style: none;
+	color: white;
+	font-family: Tahoma;
+}
 
 /* Link/Grid/Index Styling */
 
@@ -13,6 +46,7 @@ May 13, 2013
 
 a {
 	text-decoration: none;
+	color: white;
 }
 
 .centerPage {
@@ -52,7 +86,7 @@ input:focus {
     font-weight: bold;
     color: #f5f6f6;
     border-radius: 15px;
-    background-color: #23345f;
+    background-color: #FF530D;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -161,10 +195,15 @@ textarea {
 }
 
 #errorMessages {
-	color: #272727;
+	color: white;
 	display: block;
 	background-color: rgba(245,16,16,0);
 	margin-right: 0px;
     margin-bottom: 3px;
     padding-left: 0px;
+}
+
+#createdButton {
+	margin-left: 5px;
+	font-weight: bold;
 }

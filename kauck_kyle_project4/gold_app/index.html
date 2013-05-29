@@ -16,7 +16,6 @@ May 9, 2013
         <meta name="keywords" content="Games,Video Games,Tracking,Catalogue" />
         <meta name="author" content="Kyle Kauck" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/themes/styles.css" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
         <title>Game Tracker</title>
     </head>
@@ -38,7 +37,7 @@ May 9, 2013
 		    </div>
 		    <div class="browseCategories" data-theme="a">
 			<br />
-			<ul data-role="listview" data-filter="true" data-theme="a" data-filter-placeholder="Search for a console..." data-inset="true">
+			<ul data-role="listview" data-filter="true" data-theme="a" class="searchBackground" data-filter-placeholder="Search for a console..." data-inset="true">
 			    <li data-role="list-divider" data-theme="a">Browse Games by Console...</li>
 			    <li id="xboxJSON"><a href="#xbox360"><img src="img/360icon.gif" class="ui-li-icon">Xbox 360</a></li>
 			    <li id="ps3JSON"><a href="#ps3"><img src="img/ps3Icon.gif" class="ui-li-icon">Playstation 3</a></li>
@@ -94,9 +93,9 @@ May 9, 2013
 		<div data-role="content">
 		    <div data-role="controlgroup" class="ghButtons">
 			<a href="../bronze_app/index.html" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Bronze App</a>
-			<a href="http://g78624.github.io/MIU/kauck_kyle_project3/gold_app/" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH-Gold App</a>
-			<a href="http://g78624.github.io/MIU/kauck_kyle_project3/bronze_app/" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH-Bronze App</a>
-			<a href="https://github.com/g78624/MIU/tree/master/kauck_kyle_project3" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH Repo</a>
+			<a href="http://g78624.github.io/MIU/kauck_kyle_project4/gold_app/" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH-Gold App</a>
+			<a href="http://g78624.github.io/MIU/kauck_kyle_project4/bronze_app/" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH-Bronze App</a>
+			<a href="https://github.com/g78624/MIU/tree/master/kauck_kyle_project4" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">GH Repo</a>
 		    </div>
 		</div>
 	    </article>
@@ -290,7 +289,7 @@ May 9, 2013
 			</div>
 			
 			<div class="ui-grid-solo">
-			    <div class="ui-block-a"><input value="Reset Form!" type="reset" id="resetTheForm" data-theme="c"></div>
+			    <div class="ui-block-a"><input value="Reset Form!" type="reset" id="resetTheForm" data-theme="b"></div>
 			</div>
 			
 			<a href="#gameError" id="formErrorPopUp" data-rel="dialog" data-transition="pop">Errors!</a>
@@ -299,8 +298,8 @@ May 9, 2013
 		    
 		    <nav>
 			<fieldset class="ui-grid-a">
-			    <div class="ui-block-a"><a href="#" data-role="button" id="clearData" data-theme="c">Clear Data</a></div>
-			    <div class="ui-block-b"><a href="#display" data-role="button" id="displayData" data-theme="c">Display</a></div>
+			    <div class="ui-block-a"><a href="#" data-role="button" id="clearData" data-theme="b">Clear Data</a></div>
+			    <div class="ui-block-b"><a href="#display" data-role="button" id="displayData" data-theme="b">Display</a></div>
 			</fieldset>
 		    </nav>
 		</div>
