@@ -28,8 +28,9 @@ body {
 }
 
 .logo {
-	padding-top: 10px;
+	padding-top: 3px;
 	padding-left: 10px;
+	margin-bottom: -5px;
 }
 
 #homePage {

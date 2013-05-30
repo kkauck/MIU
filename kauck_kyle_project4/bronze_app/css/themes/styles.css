@@ -544,6 +544,8 @@ a.ui-link-inherit {
 .ui-header .ui-title {
 	margin-left: 10px;
 	text-align: left;
+	margin-bottom: 0;
+	margin-top: 2px;
 }
 
 .cta {
