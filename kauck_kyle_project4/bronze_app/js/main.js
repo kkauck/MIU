@@ -1,8 +1,8 @@
 /*
 Kyle Kauck
-Project Two
+Project Four
 MIU 1305
-May 13, 2013
+May 26, 2013
 */
 
 window.addEventListener("DOMContentLoaded", function (){
