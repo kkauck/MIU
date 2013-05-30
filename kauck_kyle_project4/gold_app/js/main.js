@@ -1,3 +1,10 @@
+/*
+Kyle Kauck
+Project Four
+MIU 1305
+May 28, 2013
+*/
+
 $("#index").on("pageinit", function(){
 
     //Creates all my Xbox Data
